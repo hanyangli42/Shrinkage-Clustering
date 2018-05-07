@@ -2,7 +2,7 @@ Package: shrinkageClust
 Type: Package
 Title: Cluster a data matrix using Shrinkage Clustering. 
 Version: 0.1.0
-Date: 2018-03-25
+Date: 2018-05-07
 Author: C.W. Hu, H. Li
 Maintainer: C.W. Hu <wendyhu001@gmail.com>, H. Li <hanyangli42@gmail.com>
 Description: Implementing the Shrinkage Clustering algorithm introduced by Hu (2018) <doi: 10.1186/s12859-018-2022-8>, the package partitions a given data matrix and simultaneously finds the optimal number of clusters. In addition, it allows the users to choose a minimum cluster size as a constraint.

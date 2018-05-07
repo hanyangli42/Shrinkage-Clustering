@@ -6,9 +6,10 @@
 #' @param w The minimum number of members required for each cluster
 #' @param k The maximum number of clusters allowed
 #' @param iter The maximum number of iterations
-#' @return c - n*1 vector containg cluster membership
-#' @return a - n*k matrix containing cluster membership
-#' @return score - indicator of convergence
+#' @return \item{c}{n*1 vector containg cluster membership}
+#' @return \item{a}{n*k matrix containing cluster membership}
+#' @return \item{score}{indicator of convergence}
+#'
 #' @export
 #' @examples \dontrun{
 #' }

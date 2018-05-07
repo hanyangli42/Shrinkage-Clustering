@@ -17,11 +17,11 @@ SuperCluster(s, w = NULL, k = NULL, iter = 1000, Step = 10,
 \item{iter}{The maximum number of iterations}
 }
 \value{
-c - n*1 vector containg cluster membership
+\item{c}{n*1 vector containg cluster membership}
 
-a - n*k matrix containing cluster membership
+\item{a}{n*k matrix containing cluster membership}
 
-score - indicator of convergence
+\item{score}{indicator of convergence}
 }
 \description{
 Partition a data matrix using Shrinkage Clustering
