@@ -6,9 +6,13 @@
 #' @param w The minimum number of members required for each cluster
 #' @param k The maximum number of clusters allowed
 #' @param iter The maximum number of iterations
-#' @return \item{c}{n*1 vector containg cluster membership}
-#' @return \item{a}{n*k matrix containing cluster membership}
-#' @return \item{score}{indicator of convergence}
+#' @param random  An integer specifying the number of random initializations
+#' @param Path A boolean value determining whether or not to  track and record the number of remaining clusters in each iteration
+#' @return \item{c}{An n*1 vector containg cluster membership}
+#' @return \item{a}{An n*k matrix containing cluster membership}
+#' @return \item{score}{An indicator of convergence}
+#' @details test
+#' @references Hu, Chenyue W., Hanyang Li, and Amina A. Qutub. “Shrinkage Clustering: A Fast and Size-Constrained Clustering Algorithm for Biomedical Applications.” BMC Bioinformatics 19 (2018): 19. PMC. Web. 7 May 2018.
 #'
 #' @export
 #' @examples \dontrun{
@@ -21,8 +25,9 @@
 #% f - indicator of convergence
 
 
-SuperCluster<-function(s,w=NULL,k=NULL,iter=1000,Step=10,random=1,Path=F){
+SuperCluster<-function(s,w=NULL,k=NULL,iter=1000,random=1,Path=F){
   # parameter initialization
+  Step=10
   n=dim(s)[1]
   f=0
   if(is.null(w)){

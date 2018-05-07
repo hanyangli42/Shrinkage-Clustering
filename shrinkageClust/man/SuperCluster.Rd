@@ -4,8 +4,7 @@
 \alias{SuperCluster}
 \title{Shrinkage Clustering}
 \usage{
-SuperCluster(s, w = NULL, k = NULL, iter = 1000, Step = 10,
-  random = 1, Path = F)
+SuperCluster(s, w = NULL, k = NULL, iter = 1000, random = 1, Path = F)
 }
 \arguments{
 \item{s}{The similarity matrix (n*n) of a given data matrix (n*k)}
@@ -15,19 +14,29 @@ SuperCluster(s, w = NULL, k = NULL, iter = 1000, Step = 10,
 \item{k}{The maximum number of clusters allowed}
 
 \item{iter}{The maximum number of iterations}
+
+\item{random}{An integer specifying the number of random initializations}
+
+\item{Path}{A boolean value determining whether or not to  track and record the number of remaining clusters in each iteration}
 }
 \value{
-\item{c}{n*1 vector containg cluster membership}
+\item{c}{An n*1 vector containg cluster membership}
 
-\item{a}{n*k matrix containing cluster membership}
+\item{a}{An n*k matrix containing cluster membership}
 
-\item{score}{indicator of convergence}
+\item{score}{An indicator of convergence}
 }
 \description{
 Partition a data matrix using Shrinkage Clustering
+}
+\details{
+test
 }
 \examples{
 \dontrun{
 }
 
+}
+\references{
+Hu, Chenyue W., Hanyang Li, and Amina A. Qutub. “Shrinkage Clustering: A Fast and Size-Constrained Clustering Algorithm for Biomedical Applications.” BMC Bioinformatics 19 (2018): 19. PMC. Web. 7 May 2018.
 }
