@@ -24,7 +24,7 @@ data = data[, c(1:30)]
 # compute similarity matrix
 S = simiMatrix(data)
 
-# view distribution of similarity scores in S with different beta values
+# view distribution of similarity scores in S
 hist(S)
 
 # run shrinkage clustering
@@ -36,7 +36,7 @@ clust_membership = clust$c[,1]
 table(label,clust_membership)
 
 # quantitatively assess the accuracy of the clustering result
-eval_scores = evaluation(clust_membershipt, label)
+eval_scores = evaluation(clust_membership, label)
 eval_scores$NMI # Normalized mutual information
 eval_scores$RI # Rand index
 eval_scores$F1 #F1 score
@@ -48,6 +48,7 @@ scplot(data, clust_membership)
 # library(devtools)
 # install_github('ggbiplot','vqv')
 # library(ggbiplot)
+
 }
 \references{
 Hu, Chenyue W., Hanyang Li, and Amina A. Qutub. “Shrinkage Clustering: A Fast and Size-Constrained Clustering Algorithm for Biomedical Applications.” BMC Bioinformatics 19 (2018): 19. PMC. Web. 7 May 2018.

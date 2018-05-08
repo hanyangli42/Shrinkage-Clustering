@@ -18,7 +18,7 @@ clust_membership = clust$c[,1]
 table(label,clust_membership)
 
 # quantitatively assess the accuracy of the clustering result
-eval_scores = evaluation(clust_membershipt, label)
+eval_scores = evaluation(clust_membership, label)
 eval_scores$NMI # Normalized mutual information
 eval_scores$RI # Rand index
 eval_scores$F1 #F1 score
