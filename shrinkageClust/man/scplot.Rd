@@ -15,7 +15,7 @@ scplot(data, clust_membership)
 Display a clustering assignment result  on a principal component analysis (PCA) plot
 }
 \details{
-The function uses library ggbiplot to generate the clustering assignment PCA plot. It takes the original data matrix and a clustering result as input. A pdf file of the plot will be generated.
+The function uses library ggbiplot to generate the clustering assignment PCA plot. It takes the original data matrix and a clustering result as input.
 }
 \examples{
 # load BCWD dataset (569 samples, 30 dimensions, 2 clusters)
@@ -33,9 +33,6 @@ hist(S)
 set.seed(10)
 clust = SuperCluster(s=S,w=100,k=20,iter=500,random=1)
 clust_membership = clust$c[,1]
-
-# use a confusion tablecompare the clustering solution with true membership
-table(label,clust_membership)
 
 # quantitatively assess the accuracy of the clustering result
 eval_scores = evaluation(clust_membership, label)

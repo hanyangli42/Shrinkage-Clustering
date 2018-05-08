@@ -19,12 +19,16 @@
 
 
 evaluation <- function(clust, label) {
-  library(NMI)
+
   id = 1:length(label)
   classes_id = cbind(id, label)
   clusters_id = cbind(id,clust)
   #NMI
-  NMI = NMI(clusters_id,classes_id)
+  if (requireNamespace("NMI", quietly = TRUE)) {
+    NMI = NMI::NMI(clusters_id,classes_id)
+  } else {
+    NMI = "NMI cannot be calculated because package 'NMI' is not installed."
+  }
 
   t<-table(label,clust)
   #find column sum of confusion matrix

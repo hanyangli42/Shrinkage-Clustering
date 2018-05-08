@@ -14,9 +14,6 @@ set.seed(10)
 clust = SuperCluster(s=S,w=100,k=20,iter=500,random=1)
 clust_membership = clust$c[,1]
 
-# use a confusion tablecompare the clustering solution with true membership
-table(label,clust_membership)
-
 # quantitatively assess the accuracy of the clustering result
 eval_scores = evaluation(clust_membership, label)
 eval_scores$NMI # Normalized mutual information
