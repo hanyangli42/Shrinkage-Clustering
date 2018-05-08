@@ -8,15 +8,15 @@
 #' @param iter The maximum number of iterations
 #' @param random  An integer specifying the number of random initializations
 #' @param Path A boolean value determining whether or not to  track and record the number of remaining clusters in each iteration
-#' @return \item{c}{An n*1 vector containg cluster membership}
-#' @return \item{a}{An n*k matrix containing cluster membership}
+#' @return \item{c}{An n*1 vector containg the cluster membership of each data point}
+#' @return \item{a}{An n*k matrix indicating the cluster assignment status of each data point and each class}
 #' @return \item{score}{An indicator of convergence}
-#' @details test
 #' @references Hu, Chenyue W., Hanyang Li, and Amina A. Qutub. “Shrinkage Clustering: A Fast and Size-Constrained Clustering Algorithm for Biomedical Applications.” BMC Bioinformatics 19 (2018): 19. PMC. Web. 7 May 2018.
 #'
 #' @export
-#' @examples \dontrun{
-#' }
+#'
+#' @example SuperCluster_example.R
+
 #'
 
 
@@ -27,7 +27,7 @@
 
 SuperCluster<-function(s,w=NULL,k=NULL,iter=1000,random=1,Path=F){
   # parameter initialization
-  Step=10
+  Step=1
   n=dim(s)[1]
   f=0
   if(is.null(w)){
